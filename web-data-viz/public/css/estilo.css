@@ -126,6 +126,7 @@ body {
   color: #fff;
   display: flex;
   font-size: 15px;
+  background: linear-gradient(#000000, #292828);
 }
 
 .footer .container {
@@ -154,8 +155,8 @@ body {
 
 .card {
   width: 50%;
-  background-color: #4a4a4d10;
-  border-radius: 10px;
+  background-color: #4a4a4d44;
+  border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -365,4 +366,14 @@ input {
 .cor-dos-paragrafos {
   color: #ffffff;
   font-size: 20px;
+}
+
+.lado-esquerdo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 10%;
+  color:#ffffff;
+  background-color: #000000;
 }
