@@ -58,7 +58,7 @@ function cadastrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
     var fkEmpresa = req.body.idEmpresaVincularServer;
-    var cpf = req.body.cpfvar;
+    var cpf = req.body.cpfServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {

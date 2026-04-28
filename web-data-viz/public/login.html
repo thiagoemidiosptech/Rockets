@@ -23,16 +23,10 @@
         <div class="container">
             <h1 class="titulo">Rockets</h1>
             <ul class="navbar">
-                <li>
-                    <a href="index.html">Inicial</a>
-                </li>
-                <li>
-                    <a href="simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
                 <li class="agora">
                     <a href="#">Login</a>
                 </li>
+                <li>|</li>
                 <li>
                     <a href="cadastro.html">Cadastro</a>
                 </li>
@@ -131,7 +125,7 @@
                     sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "/";
                     }, 1000); // apenas para exibir o loading
 
                 });
