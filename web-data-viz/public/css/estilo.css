@@ -90,15 +90,15 @@ body {
 
   z-index: -1;
 }
-/*.banner { */
+/*.banner { 
   height: var(--tamanho-banner);
   color: white;
   background-image: url('../assets/imgs/');
-  background-size:cover;
+  background-size:cover;*/
 
 
 .banner .container {
-  justify-content: center;S
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
