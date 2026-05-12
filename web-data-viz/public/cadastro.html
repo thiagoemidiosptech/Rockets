@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AquaTech | Cadastro</title>
+  <title>Rockets | Cadastro</title>
 
   <script src="./js/sessao.js"></script>
 
@@ -21,12 +21,17 @@
     <div class="container">
       <h1 class="titulo">Rockets</h1>
       <ul class="navbar">
+          <a href=".">Inicial</a>
+        </li>
+        <li>
+          <a href="simulador.html">Quiz</a>
+        </li>
+        <li>|</li>
         <li>
           <a href="login.html">Login</a>
         </li>
-        <li>|</li>
-        <li class="agora">
-          <a href="#">Cadastro</a>
+        <li>
+          <a class="agora" href="cadastro.html">Cadastro</a>
         </li>
       </ul>
     </div>
@@ -47,14 +52,6 @@
                          Para inserir mais um campo, copie uma das inputs abaixo.
                          Assim que inserir vá para o script abaixo.
                      -->
-          <div class="campo">
-            <span>Código de ativação:</span>
-            <input id="codigo_input" type="text" placeholder="Insira aqui seu código" />
-          </div>
-          <div class="campo">
-            <span>CPF</span>
-            <input id="cpf_input" type="text" placeholder="Insira aqui seu CPF" />
-          </div>
           <div class="campo">
             <span>Nome:</span>
             <input id="nome_input" type="text" placeholder="Seu nome" />
@@ -108,31 +105,26 @@
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
-    var cpfvar = cpf_input.value
     var nomeVar = nome_input.value;
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var codigoVar = codigo_input.value;
-    var idEmpresaVincular
 
     // Verificando se há algum campo em branco
     if (
       nomeVar == "" ||
       emailVar == "" ||
       senhaVar == "" ||
-      confirmacaoSenhaVar == "" ||
-      codigoVar == "" ||
-      cpfvar == "" 
-    ) {
+      confirmacaoSenhaVar == ""
+    )
+      
+      {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
         "(Mensagem de erro para todos os campos em branco)";
 
       finalizarAguardar();
       return false;
-    } else {
-      setInterval(sumirMensagem, 5000);
     }
 
     // Verificando se o código de ativação é de alguma empresa cadastrada
@@ -160,8 +152,6 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
-        idEmpresaVincularServer: idEmpresaVincular,
-        cpfServer: cpfvar.replace(/\D/g, "")
       }),
     })
       .then(function (resposta) {
@@ -191,26 +181,5 @@
     return false;
   }
 
-  // Listando empresas cadastradas 
-  function listar() {
-    fetch("/empresas/listar", {
-      method: "GET",
-    })
-      .then(function (resposta) {
-        resposta.json().then((empresas) => {
-          empresas.forEach((empresa) => {
-            listaEmpresasCadastradas.push(empresa.razao_social);
-            
-          });
-          console.log(`Empresas cadastradas: ${listaEmpresasCadastradas}`);
-        });
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
-  }
 
-  function sumirMensagem() {
-    cardErro.style.display = "none";
-  }
 </script>

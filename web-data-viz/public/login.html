@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AquaTech | Login</title>
+    <title>Rockets | Login</title>
 
     <script src="./js/sessao.js"></script>
 
@@ -23,13 +23,19 @@
         <div class="container">
             <h1 class="titulo">Rockets</h1>
             <ul class="navbar">
-                <li class="agora">
-                    <a href="#">Login</a>
-                </li>
-                <li>|</li>
                 <li>
-                    <a href="cadastro.html">Cadastro</a>
-                </li>
+          <a href=".">Inicial</a>
+        </li>
+        <li>
+          <a href="simulador.html">Quiz</a>
+        </li>
+        <li>|</li>
+        <li>
+          <a class="agora" href="login.html">Login</a>
+        </li>
+        <li>
+          <a href="cadastro.html">Cadastro</a>
+        </li>
             </ul>
         </div>
     </div>
@@ -121,8 +127,8 @@
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+                    sessionStorage.ID_USUARIO = json.id
+                    //sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
                     setTimeout(function () {
                         window.location = "./dashboard/cards.html";
