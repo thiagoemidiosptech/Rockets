@@ -36,8 +36,7 @@
         </div>
     </div>
 
-
-
+    <div class="banner">
     <div id="pontuacaoEJogo">
         <button class="botaoquiz" id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
 
@@ -99,6 +98,7 @@
 
         </div>
     </div>
+</div>
 
 
 
@@ -116,30 +116,129 @@
     const listaDeQuestoes = [
 
         {
-            pergunta: "Qual mês tem 30 dias?",
-            alternativaA: "Janeiro",
-            alternativaB: "Dezembro",
-            alternativaC: "Junho",
-            alternativaD: "Agosto",
+            pergunta: "Qual empresa desenvolveu o Falcon 9?",
+            alternativaA: "NASA",
+            alternativaB: "Blue Origin",
+            alternativaC: "SpaceX",
+            alternativaD: "Rocket Lab",
             alternativaCorreta: "alternativaC"
         },
 
         {
-            pergunta: "Quantas horas tem em um dia?",
-            alternativaA: "30 horas",
-            alternativaB: "38 horas",
-            alternativaC: "48 horas",
-            alternativaD: "24 horas",
+            pergunta: "O Falcon Heavy é conhecido por ser um dos foguetes mais:",
+            alternativaA: "Pequenos do mundo",
+            alternativaB: "Poderosos em operação",
+            alternativaC: "Antigos da NASA",
+            alternativaD: "Baratos da Índia",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "Qual foguete faz parte do programa Artemis?",
+            alternativaA: "Electron",
+            alternativaB: "Soyuz",
+            alternativaC: "SLS",
+            alternativaD: "SSLV",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "A Starship foi criada para missões até:",
+            alternativaA: "Apenas órbita terrestre",
+            alternativaB: "Marte e espaço profundo",
+            alternativaC: "Somente Lua",
+            alternativaD: "Somente satélites militares",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "Qual foguete foi criado para substituir o Ariane 5?",
+            alternativaA: "Atlas V",
+            alternativaB: "Electron",
+            alternativaC: "Soyuz",
+            alternativaD: "Ariane 6",
             alternativaCorreta: "alternativaD"
         },
 
         {
-            pergunta: "Qual destes números é ímpar?",
-            alternativaA: "Dez",
-            alternativaB: "Doze",
-            alternativaC: "Oito",
-            alternativaD: "Onze",
-            alternativaCorreta: "alternativaD"
+            pergunta: "O Soyuz foi desenvolvido originalmente por qual país?",
+            alternativaA: "China",
+            alternativaB: "Estados Unidos",
+            alternativaC: "União Soviética",
+            alternativaD: "Índia",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "Qual empresa criou o New Glenn?",
+            alternativaA: "NASA",
+            alternativaB: "Blue Origin",
+            alternativaC: "ULA",
+            alternativaD: "ISRO",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "O Electron é especializado em lançar:",
+            alternativaA: "Estações espaciais",
+            alternativaB: "Astronautas",
+            alternativaC: "Pequenos satélites",
+            alternativaD: "Mísseis militares",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "Qual foguete é utilizado em missões lunares chinesas?",
+            alternativaA: "Long March 5",
+            alternativaB: "Falcon 9",
+            alternativaC: "Atlas V",
+            alternativaD: "Ariane 6",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "O Long March 9 está sendo desenvolvido para futuras missões:",
+            alternativaA: "Submarinas",
+            alternativaB: "Tripuladas para Lua e Marte",
+            alternativaC: "Meteorológicas",
+            alternativaD: "Apenas comerciais",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "Qual é o foguete mais poderoso da Índia?",
+            alternativaA: "SSLV",
+            alternativaB: "Electron",
+            alternativaC: "LVM3",
+            alternativaD: "Soyuz",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "O SSLV foi criado para lançamentos:",
+            alternativaA: "Rápidos e econômicos",
+            alternativaB: "Tripulados",
+            alternativaC: "Interplanetários",
+            alternativaD: "Militares",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "Qual foguete é conhecido pela alta confiabilidade em missões espaciais?",
+            alternativaA: "Atlas V",
+            alternativaB: "Electron",
+            alternativaC: "Starship",
+            alternativaD: "SSLV",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "O Vulcan Centaur foi criado para substituir quais foguetes?",
+            alternativaA: "Falcon 9 e Falcon Heavy",
+            alternativaB: "SLS e Starship",
+            alternativaC: "Atlas V e Delta IV",
+            alternativaD: "Soyuz e Ariane 6",
+            alternativaCorreta: "alternativaC"
         }
 
     ]

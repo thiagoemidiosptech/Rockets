@@ -1,9 +1,6 @@
 /* Não usar pure white or pure black: https://uxplanet.org/basicdesign-never-use-pure-black-in-typography-36138a3327a6 */
 /* The 4-point grid system: https://medium.com/@sainzkike/controlling-spacing-in-design-systems-multiple-spacing-9bf1afec87f */
 
-* {
-  font-family: Roboto, sans-serif;
-}
 
 :root {
     --primary-brand-color: #ED145B;
@@ -20,6 +17,8 @@
     --new-gray: #CCCCCC;
     --new-black: #212427;
     --new-white: #E8E8E8;
+
+
 }
 
 span {
@@ -30,6 +29,12 @@ body {
     color: var(--new-black);
     background-color: var(--new-white);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.banner { 
+  color: white;
+  background-image: url('../assets/imgs/quizfotofundo.jpg');
+  background-size:cover;
 }
 
 button {
@@ -44,7 +49,16 @@ button {
     line-height: 40px;
     align-self: center;
     margin: 20px;
-
+    transition: all 0.5s;
+}
+button:hover {
+    background-color: #990c19;
+}
+button:disabled {
+    display: none;
+}
+label:hover {
+    color:#990c19;
 }
 
 .flex-colunar {
@@ -60,7 +74,8 @@ button {
     background-color: var(--new-white);
     border: 3px solid var(--primary-brand-color);
     border-radius: 10px;
-    width: 50%;
+    width: auto;
+    font-family: Roboto, sans-serif;
 }
 
 .border-secondary {
