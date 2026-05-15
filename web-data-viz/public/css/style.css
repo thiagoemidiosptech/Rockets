@@ -15,7 +15,7 @@
     --danger-dark: #990c19;
     --danger-light: #f0c1c6;
     --new-gray: #CCCCCC;
-    --new-black: #212427;
+    --new-black: #ffffff;
     --new-white: #E8E8E8;
 
 
@@ -28,7 +28,7 @@ span {
 body {
     color: var(--new-black);
     background-color: var(--new-white);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 .banner { 
@@ -39,7 +39,7 @@ body {
 
 button {
     cursor: pointer;
-    font-family: "Barlow", sans-serif;
+    font-family: Roboto, sans-serif;
     border-radius: 15px;
     font-weight: 600;
     font-size: 18px;
@@ -72,17 +72,18 @@ label:hover {
 
 .border-primary {
     background-color: var(--new-white);
-    border: 3px solid var(--primary-brand-color);
     border-radius: 10px;
     width: auto;
-    font-family: Roboto, sans-serif;
+    background-color: #044068;
+    backdrop-filter: blur(15px); 
 }
 
 .border-secondary {
-    background-color: var(--new-white);
-    border: 3px solid var(--secondary-brand-color);
-    border-radius: 10px;
-    width: 40%;
+    border-radius: 20px;
+    width: 45%;
+    padding: 20px;
+    background-color: #08609b18;
+    backdrop-filter: blur(15px); 
 }
 
 .padding-8 {
@@ -120,3 +121,6 @@ div#pontuacaoEJogo {
     align-items: center;
 }
 
+.perguntastamanho {
+    font-size: px;
+}
