@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS rockets;
 CREATE DATABASE rockets;
 
 USE rockets;
