@@ -264,7 +264,7 @@
     }
 
     function iniciarQuiz() {
-        if(nome.value==""){
+        if (nome.value == "") {
             alert("Informe seu nome.")
             return
         }
@@ -460,5 +460,15 @@
 
 
         console.log("Dados inseridos!!", dadosInserir);
+        irParaTelaCadastro();
+    }
+
+    function irParaTelaCadastro() {
+        setTimeout(() => {
+            alert("Indo para tela de cadastro")
+        }, 1000);
+        setTimeout(() => {
+            window.location.href = "/cadastro.html";
+        }, 5000);
     }
 </script>
