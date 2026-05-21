@@ -13,8 +13,9 @@ CREATE TABLE quiz (
 	idQuiz INT PRIMARY KEY AUTO_INCREMENT,
 	acertos INT,
 	erradas INT,
-	fkQuiz INT,
-	FOREIGN KEY (fkQuiz) REFERENCES usuario(id)
+    nome VARCHAR(50)
 );
 
 select * from usuario;
+
+select * from quiz;

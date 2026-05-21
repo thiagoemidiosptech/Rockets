@@ -14,7 +14,8 @@
     <title>Exemplo - Quiz</title>
     <link rel="stylesheet" href="./css/style.css">
 
-    <link rel="stylesheet" href="./css/estilo.css">    <link rel="icon" href="./assets/icon/foguete.ico">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="icon" href="./assets/icon/foguete.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
@@ -42,6 +43,7 @@
 
     <div class="banner">
         <div id="pontuacaoEJogo">
+            <input id="nome" placeholder="nome">
             <button class="botaoquiz" id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
 
             <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
@@ -262,6 +264,10 @@
     }
 
     function iniciarQuiz() {
+        if(nome.value==""){
+            alert("Informe seu nome.")
+            return
+        }
         document.getElementById('pontuacao').style.display = "flex"
         document.getElementById('jogo').style.display = "flex"
         document.getElementById('btnIniciarQuiz').style.display = "none"
@@ -427,6 +433,32 @@
         btnSubmeter.disabled = true
         // btnConcluir.disabled = true
         btnTentarNovamente.disabled = false
+        enviarResultados();
+    }
 
+    function enviarResultados() {
+        console.log("Chamou!!");
+        var dadosInserir = {
+            acertos: pontuacaoFinal,
+            erradas: quantidadeDeQuestoes - pontuacaoFinal,
+            nome: nome.value,
+        }
+
+        fetch("/quiz/inserir", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(dadosInserir)
+        }).then(function (resposta) {
+            console.log("Foi!")
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+
+
+        console.log("Dados inseridos!!", dadosInserir);
     }
 </script>

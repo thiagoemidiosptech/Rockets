@@ -281,7 +281,6 @@ body {
 }
 
 .btn-chart {
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border: 0;
   font-weight: 600;
   font-size: 18px;
@@ -349,7 +348,7 @@ canvas {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #ffffff;cd 
+  border-right: 3px solid #ffffff; 
   background-image: url('/assets/imgs/falcon9.jpg');
   background-size: cover;
   background-position: center;
